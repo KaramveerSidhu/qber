@@ -20,6 +20,20 @@
  #             |*D7**D8**D9*|
  #             |************|
 
-#Order of Entering --> UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
+#Order of Entering Faces (A fully solved cube) --> UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB
 
-state = 'brbwyybyr worbgrybo wbbrrwggg ryoyworwg ooogbbwry ygywoowgg'
+def getState():
+	print('Enter the state of the Cube\nEnter r for Red, o for Orange, b for Blue and so on...')
+	
+	upper = input('Enter Upper Face ')
+	right = input('Enter Right Face ')
+	front = input('Enter Front Face ')
+	down = input('Enter Downward Face ')
+	left = input('Enter Left Face ')
+	back = input('Enter Back Face ')
+
+	state = upper+right+front+down+left+back
+	state = state.replace(' ','').replace('y','U').replace('w','D').replace('r','F').replace('o','B').replace('g','R').replace('b','L')
+
+	return state
+

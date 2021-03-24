@@ -1,6 +1,6 @@
-from cubeState import state 
+from cubeState import getState 
 import kociemba
 
-state = state.replace(' ','').replace('y','U').replace('w','D').replace('r','F').replace('o','B').replace('g','R').replace('b','L')
-print(state)
-print(kociemba.solve(state))
+currentState = getState()
+print(currentState)
+print(kociemba.solve(currentState))
